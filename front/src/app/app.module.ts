@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './routes/home/home.component';
 import { LegalComponent } from './routes/legal/legal.component';
+import { QuizzcreateModule } from './quizzcreate/quizzcreate.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LegalComponent } from './routes/legal/legal.component';
   imports: [
     BrowserModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QuizzcreateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
