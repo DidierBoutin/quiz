@@ -8,12 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './routes/home/home.component';
 import { LegalComponent } from './routes/legal/legal.component';
 import { QuizzcreateModule } from './quizzcreate/quizzcreate.module';
+import { CreateComponent } from './quizz-create/create/create.component';
+import { SetupComponent } from './quizz-create/setup/setup.component';
+import { AddQuestionComponent } from './quizz-create/add-question/add-question.component';
+import { FinishedComponent } from './quizz-create/finished/finished.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LegalComponent
+    LegalComponent,
+    CreateComponent,
+    SetupComponent,
+    AddQuestionComponent,
+    FinishedComponent
   ],
   imports: [
     BrowserModule,
