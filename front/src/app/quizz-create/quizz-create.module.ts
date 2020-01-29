@@ -9,7 +9,7 @@ import { SetupComponent } from './setup/setup.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { FinishedComponent } from './finished/finished.component';
 import { WidgetModule } from '../widget/widget.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [CreateComponent, SetupComponent, AddQuestionComponent, FinishedComponent],
@@ -17,7 +17,8 @@ import { WidgetModule } from '../widget/widget.module';
     CommonModule,
     QuizzCreateRoutingModule,
     FontAwesomeModule,
-    WidgetModule
+    WidgetModule,
+    ReactiveFormsModule
   ]
 })
 export class QuizzCreateModule { }
