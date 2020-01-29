@@ -1,7 +1,9 @@
-button{
+main {
+  flex-flow: row;
+}
+
+button {
   margin: 0.7em;
   height: 8em;
   width: 8em;
 }
-
-

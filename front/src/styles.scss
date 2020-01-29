@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import '../node_modules/normalize.css/normalize.css';
 
 *,
@@ -6,18 +7,30 @@
 *::after {
   box-sizing: border-box;
 }
+
 body {
   color: inherit;
   font-size: 1em;
   font-family: sans-serif;
+
   @media screen and (min-width: 900px) {
     font-size: 2vw;
   }
 }
 
+main {
+  display: flex;
+  flex-flow: column;
+
+  width: 100%;
+  max-width: 40em;
+  padding: 0.5em;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
+
   &:hover {
     color: #222;
   }
@@ -34,20 +47,22 @@ button {
       background: #ddd;
       cursor: pointer;
     }
+
     &:active {
       border-color: #ccc;
       background: #ccc;
     }
 
     &.primary {
-      background: #333;
       border-color: #333;
+      background: #333;
       color: white;
 
       &:hover {
         border-color: #444;
         background: #444;
       }
+
       &:active {
         border-color: #555;
         background: #555;
@@ -56,23 +71,14 @@ button {
   }
 }
 
-
-
-
-main {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  max-width: 40em;
-  padding: 0.5em;
-}
-
 form {
   display: flex;
   flex-flow: column;
+  width: 19em;
 }
+
 label {
-  padding: 0.5em 0em;
+  padding: 0.5em 0;
 }
 
 input, textarea {
@@ -81,6 +87,6 @@ input, textarea {
   border: 0.1em solid #eee;
 }
 
-input[type=radio]{
+input[type=radio] {
   width: 3em;
 }
