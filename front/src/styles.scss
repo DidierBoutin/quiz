@@ -24,22 +24,63 @@ a {
 }
 
 button {
+  padding: 0.5em 1em;
   border: 0.1em solid #eee;
-  background-color: #eee;
+  background: #eee;
 
   &:not(:disabled) {
     &:hover {
       border-color: #ddd;
       background: #ddd;
+      cursor: pointer;
     }
     &:active {
       border-color: #ccc;
       background: #ccc;
     }
+
+    &.primary {
+      background: #333;
+      border-color: #333;
+      color: white;
+
+      &:hover {
+        border-color: #444;
+        background: #444;
+      }
+      &:active {
+        border-color: #555;
+        background: #555;
+      }
+    }
   }
 }
+
+
+
+
 main {
+  display: flex;
+  flex-flow: column;
   width: 100%;
   max-width: 40em;
   padding: 0.5em;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+label {
+  padding: 0.5em 0em;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 0.1em solid #eee;
+}
+
+input[type=radio]{
+  width: 3em;
 }
