@@ -1,1 +1,13 @@
-<p>question works!</p>
+<main>
+  <h1> Quizz : Toto</h1>
+  <h2>Question 1</h2>
+  <p>Quelle est la capitale de la France ?</p>
+  <form class="answers">
+    <label *ngFor="let letter of ['A', 'B', 'C', 'D']">
+      <span class="letter">{{letter}}</span>
+      <span class="answer">Paris</span>
+      <input type="radio" />
+    </label>
+    <button class="primary" routerLink="/score">Valider </button>
+  </form>
+</main>
