@@ -4,7 +4,6 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
   selector: '[appAutofocus]'
 })
 export class AutofocusDirective implements OnInit {
-
   constructor(private elt: ElementRef) {
     console.log('directive autofocus');
   }
@@ -12,5 +11,4 @@ export class AutofocusDirective implements OnInit {
   ngOnInit(): void {
     this.elt.nativeElement.focus();
   }
-
 }

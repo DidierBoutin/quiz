@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -9,10 +10,14 @@ import { SetupComponent } from './setup/setup.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { FinishedComponent } from './finished/finished.component';
 import { WidgetModule } from '../widget/widget.module';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [CreateComponent, SetupComponent, AddQuestionComponent, FinishedComponent],
+  declarations: [
+    CreateComponent,
+    SetupComponent,
+    AddQuestionComponent,
+    FinishedComponent
+  ],
   imports: [
     CommonModule,
     QuizzCreateRoutingModule,
@@ -21,4 +26,4 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class QuizzCreateModule { }
+export class QuizzCreateModule {}

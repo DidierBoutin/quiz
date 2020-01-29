@@ -9,9 +9,11 @@ import { QuizzService } from 'src/app/services/quizz.service';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-  f = new FormGroup({ name: new FormControl('', Validators.required) });
+  f = new FormGroup({
+    name: new FormControl('', Validators.required)
+  });
 
-  constructor(private router: Router, private quizz :QuizzService) {}
+  constructor(private router: Router, private quizz: QuizzService) {}
 
   ngOnInit() {}
 
