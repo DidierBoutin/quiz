@@ -14,6 +14,15 @@ export class QuizzHttpService extends QuizzService {
    }
 
  refresh() {
-   this.http.get('http://localhost:3000/v1/quizz').subscribe();
+   this.http.get('http://localhost:3000/v1/quizz').subscribe({
+     next:(data)=>{
+       console.log('data : ', data)
+     },
+     error:(err)=>{
+      console.log('err : ', err)
+
+     },
+     complete:()=>{}
+   });
  }
 }
