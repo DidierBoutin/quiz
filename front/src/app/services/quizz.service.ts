@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Quizz } from '../entities/quizz';
 import { Question } from '../interfaces/question';
 import { Progress } from '../interfaces/progress';
+import { QuizMap } from '../interfaces/quiz-map';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +47,7 @@ export class QuizzService {
     this.saveQuizzMap();
   }
 
-  getQuizzMap(): { [name: string]: Quizz } {
+  getQuizzMap(): QuizMap {
     const str = localStorage.getItem('quizz-map');
     if (!str) {
       return {};

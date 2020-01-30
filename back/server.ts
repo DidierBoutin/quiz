@@ -1,16 +1,23 @@
 import express from 'express';
 import serveIndex from 'serve-index';
-import cors from "cors"
-const app = express()
+import cors from 'cors';
+import {QuizMap} from "../front/src/app/interfaces/quiz-map";
 
-app.use(cors())
 
-const www = '../front/dist/front';
+const app = express();
+
+
+let quizzMap: QuizMap = {};
+app.use(cors());
+
+app.get('/v1/quizz', (req, res, next) => {
+  res.json(quizzMap);
+});
+
+const www = "../front/dist/front";
 app.use(express.static(www));
-app.use(serveIndex(www, {icons : true}));
+app.use(serveIndex(".", {icons: true}))
 
-
-
-app.listen(3000, () =>  {
-    console.log('Example app listening on port 3000!');
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!');
 });
